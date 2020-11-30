@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -169,6 +170,7 @@ public class mainFrame extends javax.swing.JFrame {
         
         try {
             // connct to mysql and send back socket to sender
+            String url = "http://"+userIP; 
             respS = new Socket(userIP,6001);
             respW = new PrintWriter(respS.getOutputStream());
             // check credentials and return true or false
