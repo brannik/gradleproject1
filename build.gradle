@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+mainClassName = 'gradleproject1.mainFrame'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation     'junit:junit:4.13'
+}
+
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'gradleproject1.mainFrame'
+        )
+    }
+}
